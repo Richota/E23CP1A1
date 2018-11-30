@@ -5,18 +5,13 @@
     <title></title>
   </head>
   <body>
-    <ol id="dias">
-
-    </ol>
+    <ul id="lista"></ul>
     <script>
-      var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
-      var parent_tag = document.getElementById('dias');
-      dias.map(function(x){
-        var doc_element = document.createElement("p");
-        node = document.createTextNode("HOLA");
-        doc_element.appendChild(node);
-        parent_tag.appendChild(doc_element);
-      });
+      var p = document.getElementById('lista');
+      var dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
+      for(var i = 0; i < dias.length; i++){
+        p.innerHTML += "<li>" + dias[i] + "</li>";
+      }
     </script>
   </body>
 </html>
